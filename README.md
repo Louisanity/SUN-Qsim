@@ -33,13 +33,60 @@ Hamiltonians are provides for `num_qubits = [4, 8, 20, 28]`
 
 
 # Methodology <a id="Methods"></a>
+- Reading Hamiltonian
 
 - Prepapring the ansatz
+
+- Initial State Preparation
 - Gradient
 
 # Results <a id="Results"></a>
+- Here is the metric of resources used by Hamiltonians for qubits of different sizes
+  
+| Hamiltonian Qubits    | Memory Usage (%) | CPU Usage (%) | Time Taken (sec)
+| -------- | ------- |-------| ------ |
+| 4  |    | 
+| 8  |     |
+| 12 | 2.7 | 15.3 | 8
+| 20 | 2.9 | 16.2 | 72
+| 28 | 3.1 | 16 | 112
+
 - Results with SU() initial gradient.
+Applying SU gates are applied to qubit[0,1] in each layers 
+
 - Results with new code
+Here we changed the ordering SU gate applied to [0,1] in the first layer, then [0,2] in the second layer.
+
+Using SLSQP For 12 qubits
+
+depth 2 
+
+Depth | Steps    | Value | Error
+|-------| -------- | ------- |-------| 
+|2 | 10  |  -12.15445  | 
+|2 | 20 |   -12.4984|
+|2 | 100 | -12.664 |
+|2 | 200 | -12.694 |
+
+depth 3
+
+Depth | Steps    | Value | Error
+|-------| -------- | ------- |-------| 
+|3 | 100 | -12.685
+
+Using L_BFGS for 12 qubits
+
+Depth | Steps    | Value | Error
+|-------| -------- | ------- |-------| 
+|1 | 10  |  -12.498  | 
+|1 | 100 |   -12.49999|
+|2 | 100 | 12.604 |
+|2 | 200 |  |
+
+
+After trying various other optimizers like Nelden-Mead, P_BFGS etc, SLSQP gives best performance for our solution.
+
+
 - Results with optimizers (SLSQP, BFGS, Mender)
 - Final result for 4, 8, 12, 20 qubits
 
