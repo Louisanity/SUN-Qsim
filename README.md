@@ -45,8 +45,7 @@ Hamiltonians are provides for `num_qubits = [4, 8, 20, 28]`
   
 | Hamiltonian Qubits    | Memory Usage (%) | CPU Usage (%) | Time Taken (sec)
 | -------- | ------- |-------| ------ |
-| 4  |    | 
-| 8  |     |
+| 4  | 2.5   | 14 | 2
 | 12 | 2.7 | 15.3 | 8
 | 20 | 2.9 | 16.2 | 72
 | 28 | 3.1 | 16 | 112
@@ -73,6 +72,7 @@ depth 3
 Depth | Steps    | Value | Error
 |-------| -------- | ------- |-------| 
 |3 | 100 | -12.685
+|3 | 200 | 
 
 Using L_BFGS for 12 qubits
 
@@ -80,8 +80,8 @@ Depth | Steps    | Value | Error
 |-------| -------- | ------- |-------| 
 |1 | 10  |  -12.498  | 
 |1 | 100 |   -12.49999|
-|2 | 100 | 12.604 |
-|2 | 200 |  |
+|2 | 100 | -12.604 |
+|3 | 200 |  | -12.61
 
 
 After trying various other optimizers like Nelden-Mead, P_BFGS etc, SLSQP gives best performance for our solution.
@@ -91,3 +91,5 @@ After trying various other optimizers like Nelden-Mead, P_BFGS etc, SLSQP gives 
 - Final result for 4, 8, 12, 20 qubits
 
 # Conclusion <a id="Conclusion"></a>
+
+TODO: have run.py with optimised parameters that generate the value. 
