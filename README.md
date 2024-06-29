@@ -60,36 +60,42 @@ Using SLSQP For 12 qubits
 
 depth 2 
 
-Depth | Steps    | Value | Error
+Depth | Steps    | Value | Error(%)
 |-------| -------- | ------- |-------| 
-|2 | 10  |  -12.15445  | 
-|2 | 20 |   -12.4984|
-|2 | 100 | -12.664 |
-|2 | 200 | -12.694 |
+|2 | 10  |  -12.15445  | 9.3
+|2 | 20 |   -12.4984| 6.7
+|2 | 100 | -12.664 | 5.49
+|2 | 200 | -12.694 | 5.2
 
 depth 3
 
-Depth | Steps    | Value | Error
+Depth | Steps    | Value | Error(%)
 |-------| -------- | ------- |-------| 
-|3 | 100 | -12.685
-|3 | 200 | 
+|3 | 100 | -12.685 | 5.34
+|3 | 200 | -12.69 | 5.29
 
 Using L_BFGS for 12 qubits
 
-Depth | Steps    | Value | Error
-|-------| -------- | ------- |-------| 
-|1 | 10  |  -12.498  | 
-|1 | 100 |   -12.49999|
-|2 | 100 | -12.604 |
-|3 | 200 |  | -12.61
+Depth | Steps    | Value | Error(%)
+|-------| -------- | ------- | -----
+|1 | 10  |  -12.498  | 6.73
+|1 | 100 |   -12.49999| 6.7
+|2 | 100 | -12.604 | 5.9
+|3 | 200 | -12.61 | 5.86
 
 
-After trying various other optimizers like Nelden-Mead, P_BFGS etc, SLSQP gives best performance for our solution.
+After trying various other optimizers like Nelden-Mead, P_BFGS etc, the configuration giving best performance is as follows:
 
+```
+Optimizer: SLSQP
+SU Ansatz: depth 2 steps 100
+```
 
-- Results with optimizers (SLSQP, BFGS, Mender)
-- Final result for 4, 8, 12, 20 qubits
 
 # Conclusion <a id="Conclusion"></a>
 
-TODO: have run.py with optimised parameters that generate the value. 
+Our soultion:
+
+- Initializes state using Hatre Fock Initialisation
+- Uses SU ansatz with depth 2
+- Uses SLSQP Optimizer
