@@ -1,4 +1,4 @@
-# Quantum Algorithm Grand Challenge
+# Quantum Algorithm Grand Challenge 2024
 
 ## Table of Contents
 
