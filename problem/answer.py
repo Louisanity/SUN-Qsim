@@ -37,7 +37,7 @@ add codes here
 ####################################
 """
 
-total_shots = 10**3
+total_shots = 10**4
 shots_allocator = create_equipartition_shots_allocator()
 measurement_factory = bitwise_commuting_pauli_measurement
 
