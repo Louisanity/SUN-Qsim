@@ -227,7 +227,7 @@ class RunAlgorithm:
             param hamiltonian_directory: directory where hamiltonian data file exists
             return: calculated energy.
         """
-        n_qubits = 4
+        n_qubits = 28
         ham = problem_hamiltonian(n_qubits, seed, hamiltonian_directory)
         """
         ####################################
@@ -238,21 +238,13 @@ class RunAlgorithm:
         jw_hamiltonian = jordan_wigner(ham)
         hamiltonian = operator_from_openfermion_op(jw_hamiltonian)
        
-        '''
-        result = separat_vqe(
-            n_qubits,
-            observable=hamiltonian,
-            depth=1,
-            optimizer=[SPSA],
-            separat_steps=[800],
-            init_param=None)
-        '''    
+        
         result = vqe(
             n_qubits,
             observable=hamiltonian,
-            depth=1,
+            depth=2,
             optimizer=SLSQP,
-            max_steps=40,
+            max_steps=100,
             init_param=None)
         """
         ####################################
