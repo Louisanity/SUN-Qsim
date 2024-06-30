@@ -23,8 +23,9 @@ The Hamiltonian used in QAGC is the [Fermi-Hubbard Model](https://arxiv.org/abs/
 
 Find the energy of the ground state of the one-dimensional orbital-rotated Fermi-Hubbard model.
 
+
 $$
-\tilde{H} = - t \sum_{i=0}^{2N-1}(\tilde{c}^\dagger_i \tilde{c}_{i+1} + \tilde{c}^\dagger_{i+1} \tilde{c}_i)  - \mu \sum_{i=0}^{2N-1} \tilde{c}^\dagger_i \tilde{c}_i + U \sum_{i=0}^{N-1} \tilde{c}^\dagger_{2i} \tilde{c}_{2i} \tilde{c}^\dagger_{2i+1} \tilde{c}_{2i+1}
+    \tilde{H} = - t \sum_{i=0}^{2N-1}(\tilde c^\dagger_i \tilde c_{i+1} + \tilde c^\dagger_{i+1} \tilde c_i)  - \mu \sum_{i=0}^{2N-1}  \tilde c^\dagger_i \tilde c_i + U \sum_{i=0}^{N-1} \tilde c^\dagger_{2i} \tilde c_{2i} \tilde c^\dagger_{2i + 1} \tilde c_{2i + 1} 
 $$
 
 The values of each parameter are \(N = 14\), \(t = 1\), \(U = 3\), and \(\mu = \frac{U}{2} = 1.5\).
