@@ -107,3 +107,9 @@ Our solution:
 ## References <a id="References"></a>
 - Wiersema, Roeland, et al. "Here comes the SU (N): multivariate quantum gates and gradients." Quantum 8 (2024): 1275.
 - Kojima, Ryota, Masahiko Kamoshita, and Keita Kanno. "Orbital-rotated Fermi-Hubbard model as a benchmarking problem for quantum chemistry with the exact solution." arXiv preprint arXiv:2402.11869 (2024).
+- 
+## How to cite
+If you used this solution and algorithm for your research, please cite:
+```text
+Under Preparation....
+```
